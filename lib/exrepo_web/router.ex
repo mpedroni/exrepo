@@ -7,6 +7,8 @@ defmodule ExrepoWeb.Router do
 
   scope "/api", ExrepoWeb do
     pipe_through :api
+
+    get "/users/:username/repos", UsersController, :get_repos
   end
 
   # Enables LiveDashboard only for development
